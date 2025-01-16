@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: testdb
+    ports:
+      - "4432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  pgbouncer:
+    image: bitnami/pgbouncer
+    container_name: pgbouncer
+    restart: always
+    environment:
+      POSTGRESQL_HOST: postgres
+      POSTGRESQL_DATABASE: testdb
+      POSTGRESQL_PORT_NUMBER: 5432
+      POSTGRESQL_USER: postgres
+      POSTGRESQL_PASSWORD: password
+      PGBOUNCER_MAX_CLIENT_CON: 100
+      PGBOUNCER_DEFAULT_POOL_SIZE: 20
+      PGBOUNCER_MIN_POOL_SIZE: 5
+      PGBOUNCER_POOL_MODE: transaction
+      PGBOUNCER_DATABASE: testdb
+    depends_on:
+      - postgres
+    ports:
+      - "7432:6432"
+
+  redis:
+    image: redis/redis-stack:latest
+    container_name: redis
+    restart: always
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    volumes:
+      - redisdata:/data
+    ports:
+      - "6379:6379"
+
+  socat:
+    image: alpine/socat
+    container_name: socat
+    restart: always
+    ports:
+      - "127.0.0.1:23750:2375"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: tcp-listen:2375,fork,reuseaddr unix-connect:/var/run/docker.sock
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 2375"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  crudapp:
+    build: .
+    container_name: crudapp
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_started
+      redis:
+        condition: service_started
+      socat:
+        condition: service_healthy
+    environment:
+      - APP_AUTHOR="Reynan Belen"
+      - SERVER_DB_HOST=host.docker.internal
+      - SERVER_REDIS_HOST=host.docker.internal
+
+volumes:
+  pgdata:
+  redisdata:

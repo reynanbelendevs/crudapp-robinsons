@@ -1,0 +1,35 @@
+2024-12-09 00:03:46 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Starting RedisMessageListenerContainer...
+2024-12-09 00:03:46 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Postpone listening for Redis messages until actual listeners are added
+2024-12-09 00:03:47 DEBUG o.s.d.r.core.RedisConnectionUtils - Fetching Redis Connection from RedisConnectionFactory
+2024-12-09 00:03:47 DEBUG o.s.d.r.core.RedisConnectionUtils - Closing Redis Connection
+2024-12-09 00:04:16 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Stopped RedisMessageListenerContainer
+2024-12-09 00:13:53 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Starting RedisMessageListenerContainer...
+2024-12-09 00:13:53 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Postpone listening for Redis messages until actual listeners are added
+2024-12-09 00:13:53 DEBUG o.s.d.r.core.RedisConnectionUtils - Fetching Redis Connection from RedisConnectionFactory
+2024-12-09 00:13:53 DEBUG o.s.d.r.core.RedisConnectionUtils - Closing Redis Connection
+2024-12-09 00:14:23 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Stopped RedisMessageListenerContainer
+2024-12-09 00:21:00 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Starting RedisMessageListenerContainer...
+2024-12-09 00:21:00 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Postpone listening for Redis messages until actual listeners are added
+2024-12-09 00:21:01 DEBUG o.s.d.r.core.RedisConnectionUtils - Fetching Redis Connection from RedisConnectionFactory
+2024-12-09 00:21:01 DEBUG o.s.d.r.core.RedisConnectionUtils - Closing Redis Connection
+2024-12-09 00:21:30 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Stopped RedisMessageListenerContainer
+2024-12-09 00:24:26 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Starting RedisMessageListenerContainer...
+2024-12-09 00:24:26 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Postpone listening for Redis messages until actual listeners are added
+2024-12-09 00:24:26 DEBUG o.s.d.r.core.RedisConnectionUtils - Fetching Redis Connection from RedisConnectionFactory
+2024-12-09 00:24:26 DEBUG o.s.d.r.core.RedisConnectionUtils - Closing Redis Connection
+2024-12-09 00:24:28 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Stopped RedisMessageListenerContainer
+2024-12-09 00:26:04 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Starting RedisMessageListenerContainer...
+2024-12-09 00:26:04 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Postpone listening for Redis messages until actual listeners are added
+2024-12-09 00:26:04 DEBUG o.s.d.r.core.RedisConnectionUtils - Fetching Redis Connection from RedisConnectionFactory
+2024-12-09 00:26:04 DEBUG o.s.d.r.core.RedisConnectionUtils - Closing Redis Connection
+2024-12-09 00:26:33 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Stopped RedisMessageListenerContainer
+2024-12-09 00:31:37 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Starting RedisMessageListenerContainer...
+2024-12-09 00:31:37 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Postpone listening for Redis messages until actual listeners are added
+2024-12-09 00:31:37 DEBUG o.s.d.r.core.RedisConnectionUtils - Fetching Redis Connection from RedisConnectionFactory
+2024-12-09 00:31:37 DEBUG o.s.d.r.core.RedisConnectionUtils - Closing Redis Connection
+2024-12-09 00:32:06 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Stopped RedisMessageListenerContainer
+2024-12-09 00:47:03 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Starting RedisMessageListenerContainer...
+2024-12-09 00:47:03 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Postpone listening for Redis messages until actual listeners are added
+2024-12-09 00:47:03 DEBUG o.s.d.r.core.RedisConnectionUtils - Fetching Redis Connection from RedisConnectionFactory
+2024-12-09 00:47:03 DEBUG o.s.d.r.core.RedisConnectionUtils - Closing Redis Connection
+2024-12-09 00:47:33 DEBUG o.s.d.r.l.RedisMessageListenerContainer - Stopped RedisMessageListenerContainer
