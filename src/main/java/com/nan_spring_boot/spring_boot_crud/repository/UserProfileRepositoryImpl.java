@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 @Repository
 public class UserProfileRepositoryImpl implements UserProfileRepository {
 
-    private Date transformStringToDate(String string_date) {
+    public Date transformStringToDate(String string_date) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         LocalDate recordDate = LocalDate.parse(string_date, formatter);
         return Date.valueOf(recordDate);
